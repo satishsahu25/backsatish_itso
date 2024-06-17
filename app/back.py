@@ -34,7 +34,10 @@ model=AzureChatOpenAI(
     openai_api_version=openai_apiverson,
     azure_deployment=openai_model_name,
     )
-
+@app.get("/")
+async def basic():
+    return({"Hello"})
+    
 @app.get("/ask")
 async def ask(prompt=""):
     result=model.invoke([prompt])

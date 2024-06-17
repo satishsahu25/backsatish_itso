@@ -5,6 +5,7 @@ langchain_openai
 uvicorn
 pydantic
 langchain_community
+tenacity
 
 
 

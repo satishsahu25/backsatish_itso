@@ -30,10 +30,10 @@ embed_model=os.environ["EMBED_MODEL_NAME"]
 embed_deploy_name=os.environ["EMBED_DEPLOY_MODEL_NAME"]
 embed_endpoint=os.environ["EMBED_ENDPOINT"]
 
-model=AzureChatOpenAI(
-    openai_api_version=openai_apiverson,
-    azure_deployment=openai_model_name,
-    )
+# model=AzureChatOpenAI(
+#     openai_api_version=openai_apiverson,
+#     azure_deployment=openai_model_name,
+#     )
 
 @app.route("/",methods=['GET'])
 async def basic():
@@ -41,9 +41,10 @@ async def basic():
     
 @app.route("/ask",methods=['GET'])
 async def ask():
-    prompt=request.args
-    result=model.invoke([prompt])
-    return({"response":result["content"]})
+    # prompt=request.args
+    # result=model.invoke([prompt])
+    # return({"response":result["content"]})
+    return({"response"})
 
 
 # UPLOADED_FILE_NAME=""
